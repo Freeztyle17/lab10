@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/api")
@@ -11,7 +12,8 @@ public class Controller {
     }
 
     @GetMapping("/hello")
-    public ResponseEntity<String> work(){
-        return new ResponseEntity<>("2002", HttpStatus.OK);
+    public static ResponseEntity<String> work(@RequestParam String s) throws Exception{
+        if(!s.equals("200")) throw new Exception("hihi");
+        return new ResponseEntity<>(s, HttpStatus.OK);
     }
 }
