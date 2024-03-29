@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
+    public Controller() {
+    }
+
     @GetMapping("/api/hello")
-    public ResponseEntity<String> calculating(){
+    public ResponseEntity<String> work(){
         return new ResponseEntity<>("200", HttpStatus.OK);
     }
 }

@@ -19,4 +19,4 @@ jobs:
         cache: maven
     - name: Build with Maven
      #-Dtest=<Имя класса где тесты лежат>
-      run: mvn -DemoApplicationTests=CiTestApplicationTests
+      run: mvn -ControllerTest=CiTestApplicationTests
