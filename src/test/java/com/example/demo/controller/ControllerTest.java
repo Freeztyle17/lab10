@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ControllerTest {
     @Test
     void work() {
-        String ch = "700";
+        String ch = "500";
         assertThrows(Exception.class, () -> Controller.work(ch));
     }
 }
